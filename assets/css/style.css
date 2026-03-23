@@ -843,7 +843,7 @@ footer.site-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px; /* Account for fixed header */
+    padding: 80px 0; /* Balanced padding for vertical centering */
 }
 
 .hero-editorial-intro {
@@ -1026,7 +1026,8 @@ footer.site-footer {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 80px; /* Header offset for vertical center */
+    padding-top: 80px; /* Header offset */
+    padding-bottom: 80px; /* Balanced padding for visual vertical center */
 }
 
 .folio-glass-box {
@@ -1358,7 +1359,6 @@ header {
 /* ── Body offset for fixed header ── */
 body > main,
 body > section:first-of-type,
-.folio-hero,
 .hero-editorial-img {
     padding-top: 80px;
 }
@@ -1396,6 +1396,8 @@ body > section:first-of-type,
     .process-step {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
+        align-items: center;
     }
 
     .process-img-mini {
@@ -1405,6 +1407,20 @@ body > section:first-of-type,
 
     .material-gallery-item {
         height: 280px;
+    }
+
+    .triptych-group {
+        text-align: center;
+    }
+
+    .triptych-group .ps-lg-5,
+    .triptych-group .pe-lg-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .proof-card {
+        text-align: center;
     }
 }
 
@@ -1512,6 +1528,37 @@ body > section:first-of-type,
     .offcanvas {
         max-width: 85vw !important;
     }
+
+    /* Stack hero buttons one by one */
+    .hero-btns {
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .hero-btns .btn-artisanal {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 1024px specific responsiveness for membership cards */
+@media (max-width: 1024px) {
+    .studio-membership-section .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .studio-membership-section .tier-card ul {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Newsletter placeholder color */
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+    opacity: 1; /* Firefox fix */
 }
 
 /* ── Small Mobile (≤ 480px) ── */
