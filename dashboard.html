@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Studio Manager | Alexandra Sterling Studio</title>
+    <!-- Favicon -->
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        :root {
+            --sidebar-width: 280px;
+        }
+        body { background: var(--base-cream); overflow: hidden; }
+        
+        .dashboard-wrapper { display: flex; height: 100vh; }
+        
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: white;
+            border-right: 1px solid var(--border-soft);
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
+            z-index: 1001;
+        }
+        .sidebar-header { padding: 40px 30px; border-bottom: 1px solid var(--border-soft); }
+        .sidebar-menu { flex: 1; padding: 30px 15px; overflow-y: auto; }
+        .menu-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: 50px;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .menu-link i { margin-right: 15px; font-size: 1.1rem; color: var(--accent-gold); }
+        .menu-link:hover, .menu-link.active { background: var(--base-blush); color: var(--accent-gold); }
+        
+        /* Content Area */
+        .main-content { flex: 1; overflow-y: auto; padding: 40px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        
+        .stat-card {
+            background: white; border: 1px solid var(--border-soft); padding: 30px; text-align: center; transition: 0.3s;
+        }
+        .stat-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
+        .stat-value { font-size: 2.5rem; font-family: 'Cormorant Garamond', serif; color: var(--accent-gold); line-height: 1; margin: 10px 0; }
+        
+        .studio-table { background: white; border: 1px solid var(--border-soft); width: 100%; border-collapse: separate; border-spacing: 0; }
+        .studio-table th { background: var(--base-blush); padding: 15px 20px; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; border-bottom: 1px solid var(--border-soft); }
+        .studio-table td { padding: 15px 20px; border-bottom: 1px solid var(--border-soft); font-size: 0.85rem; }
+        .status-badge { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; border: 1px solid currentColor; }
+        
+        @media (max-width: 992px) {
+            .sidebar { position: fixed; left: -280px; height: 100%; }
+            .sidebar.active { left: 0; }
+            .main-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a class="site-logo" href="index.html" style="font-size: 1.5rem;">
+                    <span class="logo-icon" style="width: 32px; height: 32px; font-size: 1.1rem;"><i class="bi bi-feather"></i></span>
+                    Alexandra <span class="logo-gold">Sterling</span>
+                </a>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#overview" class="menu-link active" data-bs-toggle="tab"><i class="bi bi-grid-fill"></i> Studio Overview</a>
+                <a href="#commissions" class="menu-link" data-bs-toggle="tab"><i class="bi bi-pen-fill"></i> Commissions</a>
+                <a href="#gallery" class="menu-link" data-bs-toggle="tab"><i class="bi bi-images"></i> My Gallery</a>
+                <a href="#clients" class="menu-link" data-bs-toggle="tab"><i class="bi bi-envelope-heart"></i> Client Circle</a>
+                <a href="#settings" class="menu-link" data-bs-toggle="tab"><i class="bi bi-gear-fill"></i> Studio Prefs</a>
+                <div class="mt-5 pt-5 px-3">
+                    <a href="index.html" class="btn-artisanal w-100 text-center mb-2">View Public Site</a>
+                    <button class="rtl-toggle-btn btn-artisanal w-100 text-center py-2" style="font-size: 0.8rem; letter-spacing: 2px;">
+                        <span style="font-weight:bold;">RTL MODE</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar sticky-top py-3 px-4 border-bottom bg-white" style="z-index: 1000; margin-bottom: 30px;">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn d-lg-none p-0 border-0 fs-2" id="sidebarToggle" style="margin-top: -5px;"><i class="bi bi-list"></i></button>
+                    <h1 class="h3 mb-0">Studio <span class="text-gold" style="font-style: italic;">Manager</span></h1>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    
+                    <div class="d-none d-md-block text-end">
+                        <p class="small text-uppercase tracking-widest mb-0 opacity-50">Artist</p>
+                        <h6 class="mb-0">Alexandra Sterling</h6>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" class="rounded-circle border border-gold" style="width: 45px; height: 45px; object-fit: cover; padding: 2px;">
+                </div>
+            </header>
+
+            <div class="tab-content border-0 p-0">
+                <!-- Tab: Overview -->
+                <div class="tab-pane fade show active" id="overview">
+                    <div class="section-card">
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <p class="small text-uppercase tracking-widest opacity-50 mb-0">Active Projects</p>
+                                    <div class="stat-value">12</div>
+                                    <p class="small text-gold mb-0">+2 from last week</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <p class="small text-uppercase tracking-widest opacity-50 mb-0">Ink Volume</p>
+                                    <div class="stat-value">4.8k</div>
+                                    <p class="small text-gold mb-0">Total Strokes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <p class="small text-uppercase tracking-widest opacity-50 mb-0">Studio Inquiries</p>
+                                    <div class="stat-value">34</div>
+                                    <p class="small text-gold mb-0">Pending Review</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <p class="small text-uppercase tracking-widest opacity-50 mb-0">Artisan Revenue</p>
+                                    <div class="stat-value">$8.2k</div>
+                                    <p class="small text-gold mb-0">This Month</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini activity in overview -->
+                        <div class="d-flex justify-content-between align-items-end mb-4">
+                            <h2 class="display-6 mb-0">Activity <span class="text-gold">Stream</span></h2>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="studio-table">
+                                <thead>
+                                    <tr>
+                                        <th>Client</th>
+                                        <th>Status</th>
+                                        <th>Updates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Julianne Smith</td>
+                                        <td><span class="status-badge" style="color: #6c757d;">Drafting</span></td>
+                                        <td>Finalizing ink samples</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vogue France</td>
+                                        <td><span class="status-badge" style="color: #0d6efd;">Inking</span></td>
+                                        <td>Second pass complete</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Commissions -->
+                <div class="tab-pane fade" id="commissions">
+                    <div class="section-card">
+                        <div class="d-flex justify-content-between align-items-end mb-4">
+                            <h2 class="display-5 mb-0">Studio <span class="text-gold">Commissions</span></h2>
+                            <button class="btn-artisanal py-2 px-3 small" style="font-size: 0.7rem;">+ New Project</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="studio-table">
+                                <thead>
+                                    <tr>
+                                        <th>Client</th>
+                                        <th>Collection</th>
+                                        <th>Status</th>
+                                        <th>Delivery</th>
+                                        <th>Amount</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Julianne Smith</td>
+                                        <td>Versailles Wedding Suite</td>
+                                        <td><span class="status-badge" style="color: #6c757d;">In Drafting</span></td>
+                                        <td>April 24, 2026</td>
+                                        <td>$1,200</td>
+                                        <td><button class="btn btn-link text-gold p-0"><i class="bi bi-eye"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vogue France</td>
+                                        <td>Luxury Event Signage</td>
+                                        <td><span class="status-badge" style="color: #0d6efd;">Inking</span></td>
+                                        <td>May 12, 2026</td>
+                                        <td>$4,500</td>
+                                        <td><button class="btn btn-link text-gold p-0"><i class="bi bi-eye"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>The Ritz-Carlton</td>
+                                        <td>Bespoke Dinner Cards</td>
+                                        <td><span class="status-badge" style="color: #198754;">Completed</span></td>
+                                        <td>Mar 15, 2026</td>
+                                        <td>$850</td>
+                                        <td><button class="btn btn-link text-gold p-0"><i class="bi bi-eye"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Gallery -->
+                <div class="tab-pane fade" id="gallery">
+                    <div class="section-card text-center py-5">
+                        <h2 class="display-6 mb-3">Artisan <span class="text-gold">Inventory</span></h2>
+                        <p class="opacity-50">Gallery management system coming soon to your studio.</p>
+                        <i class="bi bi-images display-1 opacity-25"></i>
+                    </div>
+                </div>
+
+                <!-- Tab: Clients -->
+                <div class="tab-pane fade" id="clients">
+                    <div class="section-card text-center py-5">
+                        <h2 class="display-6 mb-3">Client <span class="text-gold">Circle</span></h2>
+                        <p class="opacity-50">Customer relationship management is being curated.</p>
+                        <i class="bi bi-people display-1 opacity-25"></i>
+                    </div>
+                </div>
+
+                <!-- Tab: Settings -->
+                <div class="tab-pane fade" id="settings">
+                    <div class="section-card text-center py-5">
+                        <h2 class="display-6 mb-3">Studio <span class="text-gold">Prefs</span></h2>
+                        <p class="opacity-50">Personalize your studio experience here.</p>
+                        <i class="bi bi-gear display-1 opacity-25"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        if (sidebarToggle && sidebar) {
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Portfolio | Alexandra Sterling Studio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="site-logo" href="index.html"><span class="logo-icon"><i class="bi bi-feather"></i></span>Alexandra
+                <span class="logo-gold">Sterling</span></a>
+            <nav class="d-none d-xl-flex align-items-center gap-1">
+                <div class="header-dropdown">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="header-dropdown-menu"><a href="index.html">Home Style 1</a><a href="index-2.html">Home
+                            Style 2</a></div>
+                </div>
+                <a href="about.html" class="nav-link">Story</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <a href="register.html" class="btn-header-signup ms-2">Sign Up</a>
+
+                <button id="theme-toggle" class="theme-toggle-btn ms-2"><i class="bi bi-moon-fill"></i></button>
+            </nav>
+            <div class="d-flex d-xl-none align-items-center gap-2">
+
+                <button id="theme-toggle-mobile" class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+                <button class="btn border-0 shadow-none p-1" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i
+                        class="bi bi-list fs-2"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header p-4 border-bottom">
+            <h5 class="offcanvas-title opacity-50 text-uppercase ls-2" style="font-size: 0.9rem;">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-4">
+            <ul class="list-unstyled d-flex flex-column gap-3">
+                <li class="border-bottom pb-2"><a href="index.html" class="nav-link fs-5 fw-bold">Home</a>
+                    <div class="ps-3 mt-2"><a href="index.html" class="nav-link small">Home Style 1</a><a
+                            href="index-2.html" class="nav-link small">Home Style 2</a></div>
+                </li>
+                <li><a href="about.html" class="nav-link fs-5">Story</a></li>
+                <li><a href="services.html" class="nav-link fs-5">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link fs-5 active">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link fs-5">Contact</a></li>
+                <li class="mt-3"><a href="register.html" class="btn-artisanal w-100 text-center">Sign Up</a></li>
+                <li class="mt-2">
+                    <button class="rtl-toggle-btn btn-artisanal w-100 text-center py-2"
+                        style="font-size: 0.8rem; letter-spacing: 2px;">
+                        <span style="font-weight:bold;">RTL MODE</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- UNIFORM FOLIO HERO -->
+    <section class="folio-hero hero-portfolio reveal">
+        <div class="container">
+            <div class="folio-glass-box text-center">
+                <span class="text-gold text-uppercase small ls-3 mb-3 d-block">Curated Masterpieces</span>
+                <h1 class="folio-hero-title mb-3">Selected <br><span class="script-font text-gold">Works</span></h1>
+                <p class="lead opacity-75 mx-auto mb-0" style="max-width: 800px;">
+                    A collection of hand-lettered heirlooms, bespoke signage, and experimental calligraphy crafted with
+                    timeless grace and precision.
+                    Each project is a testament to the preservation of the written wordâ€”a rhythmic dance between
+                    heritage minerals and organic parchment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- TRIPTYCH NARRATIVE 1 -->
+        <section class="section-padding-lg bg-glass-white reveal">
+            <div class="container">
+                <div class="row align-items-center triptych-group">
+                    <div class="col-lg-7">
+                        <div class="triptych-item triptych-large">
+                            <img src="assets/img/portfolio-vows.png" alt="La Grande Vows"
+                                class="w-100 h-100 object-fit-cover shadow-sm">
+                            <div class="triptych-overlay">
+                                <span class="text-gold text-uppercase small ls-2 mb-2">Project I</span>
+                                <h2 class="h3 text-white">La Grande Vows</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="ps-lg-5 mt-5 mt-lg-0">
+                            <h6 class="text-gold text-uppercase ls-3 mb-3">Wedding Commission</h6>
+                            <h3 class="display-5 mb-4">A Legacy in Gold</h3>
+                            <p class="opacity-75 mb-5">Oversized charcoal handmade paper serves as the canvas for
+                                sprawling Spencerian script in custom-mixed gold pigment.</p>
+                            <div class="triptych-item triptych-medium shadow-lg">
+                                <img src="assets/img/services-inking.png" alt="Inking Detail"
+                                    class="w-100 h-100 object-fit-cover shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRIPTYCH NARRATIVE 2 (Reversed) -->
+                <div class="row align-items-center flex-row-reverse triptych-group">
+                    <div class="col-lg-7">
+                        <div class="triptych-item triptych-large">
+                            <img src="assets/img/portfolio-flora.png" alt="Minimalist Flora"
+                                class="w-100 h-100 object-fit-cover shadow-sm">
+                            <div class="triptych-overlay">
+                                <span class="text-gold text-uppercase small ls-2 mb-2">Project II</span>
+                                <h2 class="h3 text-white">Floral Minimalism</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="pe-lg-5 mt-5 mt-lg-0">
+                            <h6 class="text-gold text-uppercase ls-3 mb-3">Invitation Suite</h6>
+                            <h3 class="display-5 mb-4">Organic Elegance</h3>
+                            <p class="opacity-75 mb-5">Fine line serif calligraphy paired with deckle-edged paper and
+                                single-origin pressed wildflowers.</p>
+                            <div class="triptych-item triptych-medium shadow-lg">
+                                <img src="assets/img/detail-deckle-paper.png" alt="Paper Detail"
+                                    class="w-100 h-100 object-fit-cover shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE ARTIST'S PROOF -->
+        <section class="section-padding-lg bg-light reveal">
+            <div class="container text-center mb-5">
+                <span class="text-gold text-uppercase small ls-3 mb-2 d-block">Tools of the Craft</span>
+                <h2 class="display-3">The Artist's Proof</h2>
+            </div>
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-5">
+                        <div class="proof-card p-4">
+                            <img src="assets/img/proof-nibs.png" alt="Vintage Nibs"
+                                class="w-100 proof-img shadow-sm mb-4">
+                            <h4 class="h5 text-uppercase ls-1">The Steel Muse</h4>
+                            <p class="small opacity-75">Curated vintage nibs, each with a unique flex and flourish
+                                potential for heirloom documents.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="proof-card p-4">
+                            <img src="assets/img/proof-ink.png" alt="Crystal Inkwell"
+                                class="w-100 proof-img shadow-sm mb-4">
+                            <h4 class="h5 text-uppercase ls-1">Sacred Pigments</h4>
+                            <p class="small opacity-75">Bespoke ink blends ranging from deep soot black to shimmering
+                                heritage gold, mixed by hand in the studio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding text-center reveal">
+            <div class="container">
+                <div class="col-lg-8 mx-auto p-5 shadow-sm border"
+                    style="background: var(--bg-card); border-color: var(--border-soft) !important;">
+                    <h2 class="display-4 mb-4">Commission Your Own</h2>
+                    <p class="lead opacity-75 mb-5">Limited monthly availability for bespoke projects.</p>
+                    <a href="contact.html" class="btn-artisanal">Inquire Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4"><a class="site-logo mb-4 d-inline-block" href="index.html">
+                        <span class="logo-icon"><i class="bi bi-feather"></i></span>Alexandra
+                        <span class="logo-gold">Sterling</span>
+                    </a>
+                    <p class="small opacity-75 mt-3">Bespoke calligraphy and custom signage for life's most beautiful
+                        moments.</p>
+                    <div class="d-flex gap-3 mt-4"><a href="#" class="footer-social"><i
+                                class="bi bi-instagram"></i></a><a href="#" class="footer-social"><i
+                                class="bi bi-pinterest"></i></a><a href="#" class="footer-social"><i
+                                class="bi bi-envelope"></i></a></div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <p class="footer-heading">Navigate</p><a href="index.html" class="footer-link">Home</a><a
+                        href="about.html" class="footer-link">Our Story</a><a href="services.html"
+                        class="footer-link">Services</a><a href="portfolio.html" class="footer-link">Portfolio</a><a
+                        href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Offerings</p><a href="services.html" class="footer-link">Wedding
+                        Suites</a><a href="services.html" class="footer-link">Event Signage</a><a href="services.html"
+                        class="footer-link">Bespoke Commissions</a><a href="services.html" class="footer-link">Brand
+                        Identity</a>
+                </div>
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Connect</p>
+                    <p class="small opacity-75">hello@alexandrasterling.art</p>
+                    <p class="small opacity-75">Ink District, City Center</p><a href="contact.html"
+                        class="btn-artisanal mt-3" style="padding: 8px 22px; font-size: 0.7rem;">Send Inquiry</a>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="small opacity-50 mb-0">&copy; 2026 Alexandra Sterling Studio.</p>
+                <div class="d-flex gap-3"><a href="login.html" class="footer-link mb-0">Login</a><a href="register.html"
+                        class="footer-link mb-0">Sign Up</a></div>
+            </div>
+        </div>
+    </footer>
+    <div class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

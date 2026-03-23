@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Home | Alexandra Sterling Studio</title>
+    <meta name="description"
+        content="Artisanal calligraphy and bespoke signage for life's most beautiful celebrations.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- LOADER (no text, just spinner) -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo: icon + name (same across all pages) -->
+            <a class="site-logo" href="index.html">
+                <span class="logo-icon"><i class="bi bi-feather"></i></span>
+                Alexandra <span class="logo-gold">Sterling</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="d-none d-xl-flex align-items-center gap-1">
+                <!-- Home with dropdown -->
+                <div class="header-dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <div class="header-dropdown-menu">
+                        <a href="index.html" class="active">Home Style 1</a>
+                        <a href="index-2.html">Home Style 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">Story</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <!-- Sign Up button BEFORE theme toggle -->
+
+                <a href="register.html" class="btn-header-signup ms-2">Sign Up</a>
+
+
+                <button id="theme-toggle" class="theme-toggle-btn ms-2"><i class="bi bi-moon-fill"></i></button>
+            </nav>
+
+            <!-- Mobile toggles -->
+            <div class="d-flex d-xl-none align-items-center gap-2">
+
+
+                <button id="theme-toggle-mobile" class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+                <button class="btn border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header p-4 border-bottom">
+            <a class="site-logo" href="index.html">
+                <span class="logo-icon"><i class="bi bi-feather"></i></span>
+                Alexandra <span class="logo-gold">Sterling</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-4">
+            <ul class="list-unstyled d-flex flex-column gap-3">
+                <li class="border-bottom pb-2">
+                    <a href="index.html" class="nav-link fs-5 fw-bold active">Home</a>
+                    <div class="ps-3 mt-2 d-flex flex-column gap-1">
+                        <a href="index.html" class="nav-link small active" style="font-weight:600;">Home Style 1</a>
+                        <a href="index-2.html" class="nav-link small">Home Style 2</a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link fs-5">Story</a></li>
+                <li><a href="services.html" class="nav-link fs-5">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link fs-5">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link fs-5">Contact</a></li>
+                <li class="mt-3"><a href="register.html" class="btn-artisanal w-100 text-center">Sign Up</a></li>
+                <li class="mt-2">
+                    <button class="rtl-toggle-btn btn-artisanal w-100 text-center py-2"
+                        style="font-size: 0.8rem; letter-spacing: 2px;">
+                        <span style="font-weight:bold;">RTL MODE</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+             HERO Ã¢â‚¬â€ Calligrapher at Work
+        Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <section class="d-flex align-items-center position-relative text-center overflow-hidden"
+            style="min-height:100vh; padding-top:80px;
+                   background: url('https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?auto=format&fit=crop&q=85&w=1920') center 30%/cover no-repeat;">
+
+            <!-- Warm dark overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: linear-gradient(160deg, rgba(15,10,5,0.72) 0%, rgba(40,25,10,0.48) 100%);"></div>
+
+            <!-- Decorative gold accent lines -->
+            <div class="position-absolute d-none d-lg-block"
+                style="width:2px; height:160px; background:var(--accent-gold); opacity:0.55; top:18%; left:7%; transform:rotate(15deg);">
+            </div>
+            <div class="position-absolute d-none d-lg-block"
+                style="width:2px; height:160px; background:var(--accent-gold); opacity:0.55; top:18%; right:7%; transform:rotate(-15deg);">
+            </div>
+
+            <div class="container position-relative reveal py-5">
+                <p class="hero-anim-1"
+                    style="letter-spacing:6px; color:var(--accent-gold); font-size:0.8rem; text-transform:uppercase; font-family:'EB Garamond',serif;">
+                    Est. 2018 &nbsp;Ã‚Â·&nbsp; Artisanal Calligraphy Studio
+                </p>
+                <h1 class="display-1 fw-normal text-white mb-4 hero-anim-2"
+                    style="line-height:1.1; font-family:'Cormorant Garamond',serif;">
+                    Where Every Stroke<br>
+                    <span class="script-font" style="font-size:1.15em;">Tells a Story</span>
+                </h1>
+                <p class="lead col-lg-5 mx-auto mb-5 hero-anim-3"
+                    style="color:rgba(255,255,255,0.78); font-family:'EB Garamond',serif; font-weight:400; font-size:1.15rem;">
+                    Bespoke hand-lettering and custom signage for weddings, luxury brands, and heirloom commissions.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap hero-anim-4">
+                    <a href="portfolio.html" class="btn-artisanal"
+                        style="border-color:rgba(255,255,255,0.75); color:white;">Explore Portfolio</a>
+                    <a href="contact.html" class="btn-artisanal"
+                        style="background:var(--accent-gold); color:white; border-color:var(--accent-gold);">Commission
+                        a Piece</a>
+                </div>
+                <!-- Clickable scroll arrow -->
+                <div class="mt-5 pt-3 d-none d-md-block hero-anim-5">
+                    <button id="heroScrollBtn" aria-label="Scroll to next section"
+                        style="background:none;border:none;cursor:pointer;padding:0;">
+                        <i class="bi bi-chevron-double-down text-white opacity-50 fs-4 scroll-bounce"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+             CURATED WORKS Ã¢â‚¬â€ 3 Feature Cards
+        Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â CURATED WORKS Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <section class="section-padding bg-white" id="curated-works">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <p class="small text-uppercase mb-2" style="letter-spacing:4px; color:var(--accent-gold);">
+                        Handcrafted Excellence</p>
+                    <h2 class="display-3">Curated Works</h2>
+                    <div class="mx-auto mt-3" style="width:60px; height:1px; background:var(--accent-gold);"></div>
+                </div>
+
+                <!-- Row: all cards same height, centered -->
+                <div class="row g-4 mt-2 justify-content-center">
+
+                    <!-- Card 1 -->
+                    <div class="col-sm-10 col-md-4 d-flex reveal reveal-delay-1">
+                        <div class="work-card">
+                            <div class="work-card__img">
+                                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=700"
+                                    alt="Wedding Stationery">
+                                <div class="work-card__overlay"><span>Collection I</span></div>
+                            </div>
+                            <div class="work-card__body">
+                                <p class="work-card__label">Collection I</p>
+                                <h3 class="work-card__title">Wedding Stationery</h3>
+                                <p class="work-card__desc">Invitation suites, place cards, and fine paper details
+                                    crafted with love.</p>
+                                <a href="portfolio.html" class="work-card__link">View Work <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 Ã¢â‚¬â€ no offset, same as others -->
+                    <div class="col-sm-10 col-md-4 d-flex reveal reveal-delay-2">
+                        <div class="work-card">
+                            <div class="work-card__img">
+                                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=700"
+                                    alt="Event Signage">
+                                <div class="work-card__overlay"><span>Collection II</span></div>
+                            </div>
+                            <div class="work-card__body">
+                                <p class="work-card__label">Collection II</p>
+                                <h3 class="work-card__title">Event Signage</h3>
+                                <p class="work-card__desc">Mirror seating charts, welcome boards, and acrylic
+                                    masterworks.</p>
+                                <a href="portfolio.html" class="work-card__link">View Work <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-sm-10 col-md-4 d-flex reveal reveal-delay-3">
+                        <div class="work-card">
+                            <div class="work-card__img">
+                                <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=700"
+                                    alt="Brand Identity">
+                                <div class="work-card__overlay"><span>Collection III</span></div>
+                            </div>
+                            <div class="work-card__body">
+                                <p class="work-card__label">Collection III</p>
+                                <h3 class="work-card__title">Brand Identity</h3>
+                                <p class="work-card__desc">Custom script logos, monograms, and luxury brand lettering.
+                                </p>
+                                <a href="portfolio.html" class="work-card__link">View Work <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+             NEW SECTION 1 Ã¢â‚¬â€ Artist Statement Banner
+             (Full-bleed image with side-by-side layout)
+        Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <section class="reveal" style="min-height:560px; display:flex;">
+            <!-- Left: Image -->
+            <div class="d-none d-lg-block" style="flex:0 0 45%; overflow:hidden; position:relative;">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=85&w=900"
+                    style="width:100%; height:100%; object-fit:cover; transition:transform 8s ease;" id="parallaxImg">
+                <div style="position:absolute;inset:0;background:rgba(20,12,5,0.18);"></div>
+            </div>
+            <!-- Right: Text -->
+            <div style="flex:1; background:var(--base-blush); display:flex; align-items:center;">
+                <div class="p-5 p-lg-5" style="max-width:580px; margin:0 auto;">
+                    <p class="small text-uppercase mb-3" style="letter-spacing:4px; color:var(--accent-gold);">The
+                        Artist</p>
+                    <h2 class="display-3 mb-4">ink is my <span
+                            style="font-style:italic; color:var(--accent-gold);">mother tongue</span></h2>
+                    <p class="lead opacity-75 mb-4" style="font-weight:300;">
+                        Alexandra Sterling founded this studio with a single belief Ã¢â‚¬â€ that in a world of typed
+                        messages, a hand-written word carries the weight of a thousand words.
+                    </p>
+                    <p class="opacity-50 mb-5" style="font-size:0.9rem;">
+                        Each commission begins with a conversation. Every letterform is intentional. The result is not
+                        just ink on paper Ã¢â‚¬â€ it's a memory pressed into permanence.
+                    </p>
+                    <a href="about.html" class="btn-artisanal">Read the Full Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+             THE PROCESS Ã¢â‚¬â€ 3-step timeline
+        Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â�                    <div class="col-12 col-xl-4 d-flex reveal mb-4">
+                        <div class="card-artisanal w-100 h-100 d-flex flex-column text-center text-xl-start position-relative" style="padding:40px 35px;">
+                            <span style="font-family:'Cormorant Garamond',serif; font-size:5rem; color:var(--accent-gold); line-height:1; opacity:0.15; position:absolute; top:10px; left:50%; transform:translateX(-50%);">"</span>
+                            <p class="mb-4 fst-italic opacity-75" style="font-size:1rem; line-height:1.9; position:relative; z-index:1;">
+                                "Working with Alexandra was a dream. Our wedding suite was beyond anything I imagined — every guest kept asking where we got it."
+                            </p>
+                            <div class="d-flex flex-column flex-xl-row align-items-center gap-3 mt-auto">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=80"
+                                    class="rounded-circle" style="width:46px; height:46px; object-fit:cover; border:2px solid var(--accent-gold);">
+                                <div class="text-xl-start">
+                                    <p class="mb-0 fw-bold" style="font-size:0.85rem;">Julianne & Marc</p>
+                                    <p class="mb-0 small" style="color:var(--accent-gold); letter-spacing:2px; font-size:0.7rem; text-transform:uppercase;">Wedding Client, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+             NEW SECTION 2 Ã¢â‚¬â€ Client Testimonials
+        Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <section class="section-padding reveal" style="background:var(--base-cream);">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <p class="small text-uppercase mb-2" style="letter-spacing:4px; color:var(--accent-gold);">Voices of
+                        Trust</p>
+                    <h2 class="display-3">Client Words</h2>
+                    <div class="mx-auto mt-3" style="width:60px; height:1px; background:var(--accent-gold);"></div>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <!-- Testimonial 1 -->
+                    <div class="col-12 col-xl-4 d-flex reveal mb-4">
+                        <div class="card-artisanal w-100 h-100 d-flex flex-column text-center text-xl-start position-relative"
+                            style="padding:40px 35px;">
+                            <span
+                                style="font-family:'Cormorant Garamond',serif; font-size:5rem; color:var(--accent-gold); line-height:1; opacity:0.15; position:absolute; top:10px; left:50%; transform:translateX(-50%);">"</span>
+                            <p class="mb-4 fst-italic opacity-75"
+                                style="font-size:1rem; line-height:1.9; position:relative; z-index:1;">
+                                "Working with Alexandra was a dream. Our wedding suite was beyond anything I imagined
+                                Ã¢â‚¬â€ every guest kept asking where we got it."
+                            </p>
+                            <div class="d-flex flex-column flex-xl-row align-items-center gap-3 mt-auto">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=80"
+                                    class="rounded-circle"
+                                    style="width:46px; height:46px; object-fit:cover; border:2px solid var(--accent-gold);">
+                                <div class="text-xl-start">
+                                    <p class="mb-0 fw-bold" style="font-size:0.85rem;">Julianne & Marc</p>
+                                    <p class="mb-0 small"
+                                        style="color:var(--accent-gold); letter-spacing:2px; font-size:0.7rem; text-transform:uppercase;">
+                                        Wedding Client, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 Ã¢â‚¬â€ same style as cards 1 & 3 -->
+                    <div class="col-12 col-xl-4 d-flex reveal mb-4">
+                        <div class="card-artisanal w-100 h-100 d-flex flex-column text-center text-xl-start position-relative"
+                            style="padding:40px 35px;">
+                            <span
+                                style="font-family:'Cormorant Garamond',serif; font-size:5rem; color:var(--accent-gold); line-height:1; opacity:0.15; position:absolute; top:10px; left:50%; transform:translateX(-50%);">"</span>
+                            <p class="mb-4 fst-italic opacity-75"
+                                style="font-size:1rem; line-height:1.9; position:relative; z-index:1;">
+                                "The bespoke lettering for our brand launch was pure magic. It elevated our entire
+                                identity and clients noticed immediately."
+                            </p>
+                            <div class="d-flex flex-column flex-xl-row align-items-center gap-3 mt-auto">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=80"
+                                    class="rounded-circle"
+                                    style="width:46px; height:46px; object-fit:cover; border:2px solid var(--accent-gold);">
+                                <div class="text-xl-start">
+                                    <p class="mb-0 fw-bold" style="font-size:0.85rem;">Sebastian Moore</p>
+                                    <p class="mb-0 small"
+                                        style="color:var(--accent-gold); letter-spacing:2px; font-size:0.7rem; text-transform:uppercase;">
+                                        Creative Director, Lumière</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="col-12 col-xl-4 d-flex reveal mb-4">
+                        <div class="card-artisanal w-100 h-100 d-flex flex-column text-center text-xl-start position-relative"
+                            style="padding:40px 35px;">
+                            <span
+                                style="font-family:'Cormorant Garamond',serif; font-size:5rem; color:var(--accent-gold); line-height:1; opacity:0.15; position:absolute; top:10px; left:50%; transform:translateX(-50%);">"</span>
+                            <p class="mb-4 fst-italic opacity-75"
+                                style="font-size:1rem; line-height:1.9; position:relative; z-index:1;">
+                                "The framed poem Alexandra wrote for my mother's 70th birthday made her cry. It will be
+                                passed down through our family forever."
+                            </p>
+                            <div class="d-flex flex-column flex-xl-row align-items-center gap-3 mt-auto">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=80"
+                                    class="rounded-circle"
+                                    style="width:46px; height:46px; object-fit:cover; border:2px solid var(--accent-gold);">
+                                <div class="text-xl-start">
+                                    <p class="mb-0 fw-bold" style="font-size:0.85rem;">Camille Fontaine</p>
+                                    <p class="mb-0 small"
+                                        style="color:var(--accent-gold); letter-spacing:2px; font-size:0.7rem; text-transform:uppercase;">
+                                        Commission Client, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="contact.html" class="btn-artisanal">Share Your Vision</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+             FINAL CTA Ã¢â‚¬â€ Full-bleed dark banner
+        Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <section class="position-relative text-center reveal overflow-hidden"
+            style="min-height:420px; display:flex; align-items:center;
+                   background:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;">
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(15,10,5,0.78);"></div>
+            <div class="container position-relative py-5">
+                <p class="small text-uppercase mb-3" style="letter-spacing:5px; color:var(--accent-gold);">Limited
+                    Commissions Ã¢â‚¬â€ 2026</p>
+                <h2 class="display-2 text-white mb-4">Let's Capture<br><span
+                        style="font-style:italic; color:var(--accent-gold);">Your Story</span></h2>
+                <p class="text-white opacity-75 col-lg-5 mx-auto mb-5">There are a finite number of commissions
+                    available this year. Secure yours before the calendar fills.</p>
+                <a href="contact.html" class="btn-artisanal" style="border-color:var(--accent-gold); color:white;">
+                    Connect with the Artist
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (4-column) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Col 1: Logo + about -->
+                <div class="col-lg-4 footer-logo-col">
+                    <a class="site-logo mb-4 d-inline-block" href="index.html">
+                        <span class="logo-icon"><i class="bi bi-feather"></i></span>
+                        Alexandra <span class="logo-gold">Sterling</span>
+                    </a>
+                    <p class="small opacity-75 mt-3">Bespoke calligraphy and custom signage for life's most beautiful
+                        moments.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="footer-social"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="footer-social"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Navigation -->
+                <div class="col-sm-4 col-lg-2">
+                    <p class="footer-heading">Navigate</p>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">Our Story</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <!-- Col 3: Services -->
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Offerings</p>
+                    <a href="services.html" class="footer-link">Wedding Suites</a>
+                    <a href="services.html" class="footer-link">Event Signage</a>
+                    <a href="services.html" class="footer-link">Bespoke Commissions</a>
+                    <a href="services.html" class="footer-link">Brand Identity</a>
+                </div>
+                <!-- Col 4: Contact -->
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Connect</p>
+                    <p class="small opacity-75">hello@alexandrasterling.art</p>
+                    <p class="small opacity-75">Ink District, City Center</p>
+                    <a href="contact.html" class="btn-artisanal mt-3" style="padding: 8px 22px; font-size: 0.7rem;">Send
+                        Inquiry</a>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="small opacity-50 mb-0">&copy; 2026 Alexandra Sterling Studio. Handcrafted with love.</p>
+                <div class="d-flex gap-3">
+                    <a href="login.html" class="footer-link mb-0">Login</a>
+                    <a href="register.html" class="footer-link mb-0">Sign Up</a>
+                    <a href="404.html" class="footer-link mb-0">404</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <div class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Hero scroll button Ã¢â‚¬â€ smooth scroll to Curated Works
+        document.getElementById('heroScrollBtn').addEventListener('click', function () {
+            const target = document.getElementById('curated-works');
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

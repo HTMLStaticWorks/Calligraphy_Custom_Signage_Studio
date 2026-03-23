@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Services | Alexandra Sterling Studio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="site-logo" href="index.html"><span class="logo-icon"><i class="bi bi-feather"></i></span>Alexandra
+                <span class="logo-gold">Sterling</span></a>
+            <nav class="d-none d-xl-flex align-items-center gap-1">
+                <div class="header-dropdown">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="header-dropdown-menu"><a href="index.html">Home Style 1</a><a href="index-2.html">Home
+                            Style 2</a></div>
+                </div>
+                <a href="about.html" class="nav-link">Story</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                
+                <a href="register.html" class="btn-header-signup ms-2">Sign Up</a>
+                
+                <button id="theme-toggle" class="theme-toggle-btn ms-2"><i class="bi bi-moon-fill"></i></button>
+            </nav>
+            <div class="d-flex d-xl-none align-items-center gap-2">
+                
+                <button id="theme-toggle-mobile" class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+                <button class="btn border-0 shadow-none p-1" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i
+                        class="bi bi-list fs-2"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header p-4 border-bottom">
+            <h5 class="offcanvas-title opacity-50 text-uppercase ls-2" style="font-size: 0.9rem;">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-4">
+            <ul class="list-unstyled d-flex flex-column gap-3">
+                <li class="border-bottom pb-2"><a href="index.html" class="nav-link fs-5 fw-bold">Home</a>
+                    <div class="ps-3 mt-2"><a href="index.html" class="nav-link small">â€” Home Style 1</a><a
+                            href="index-2.html" class="nav-link small">â€” Home Style 2</a></div>
+                </li>
+                <li><a href="about.html" class="nav-link fs-5">Story</a></li>
+                <li><a href="services.html" class="nav-link fs-5 active">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link fs-5">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link fs-5">Contact</a></li>
+                <li class="mt-3"><a href="register.html" class="btn-artisanal w-100 text-center">Sign Up</a></li>
+                <li class="mt-2">
+                    <button class="rtl-toggle-btn btn-artisanal w-100 text-center py-2" style="font-size: 0.8rem; letter-spacing: 2px;">
+                        <span style="font-weight:bold;">RTL MODE</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- UNIFORM FOLIO HERO -->
+        <section class="folio-hero hero-services reveal">
+            <div class="container">
+                <div class="folio-glass-box text-center">
+                    <span class="text-gold text-uppercase small ls-3 mb-3 d-block">Tailored with Grace</span>
+                    <h1 class="folio-hero-title mb-3">Studio <br><span class="script-font text-gold">Offerings</span>
+                    </h1>
+                    <p class="lead opacity-75 mx-auto mb-0" style="max-width: 600px;">
+                        Bespoke calligraphy and signage services crafted for life's most significant milestones.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE COLLECTIONS -->
+        <section class="section-padding-lg bg-glass-white reveal">
+            <div class="container">
+                <div class="row g-5 align-items-stretch">
+                    <div class="col-lg-4">
+                        <div class="material-card reveal">
+                            <span class="text-gold h1 d-block mb-4 script-font">01</span>
+                            <h3 class="h4 mb-3 text-uppercase ls-1">Wedding Suites</h3>
+                            <p class="small opacity-75 mb-4">Complete heirloom invitation sets, hand-lettered envelopes,
+                                and
+                                custom vellum overlays that tell your love story.</p>
+                            <a href="contact.html" class="btn-artisanal">Inquire</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="material-card reveal">
+                            <span class="text-gold h1 d-block mb-4 script-font">02</span>
+                            <h3 class="h4 mb-3 text-uppercase ls-1">Event Signage</h3>
+                            <p class="small opacity-75 mb-4">From grand mirror seating charts to organic wood and
+                                acrylic
+                                welcome boards that set the tone for your celebration.</p>
+                            <a href="contact.html" class="btn-artisanal">Inquire</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="material-card reveal">
+                            <span class="text-gold h1 d-block mb-4 script-font">03</span>
+                            <h3 class="h4 mb-3 text-uppercase ls-1">Commissions</h3>
+                            <p class="small opacity-75 mb-4">Framed hand-written poems, legacy letters, and bespoke
+                                gifts
+                                designed to be cherished for generations.</p>
+                            <a href="contact.html" class="btn-artisanal">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE PROCESS PALETTE (New Section 1) -->
+        <section class="section-padding bg-body reveal">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="text-gold text-uppercase small ls-3 mb-2 d-block">Our Workflow</span>
+                    <h2 class="display-3">The Process Ritual</h2>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-12">
+                        <div class="process-step">
+                            <div class="process-num">01</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 text-uppercase ls-1">Creative Consultation</h4>
+                                <p class="small opacity-75 mb-0">We begin with a deep dive into your vision, mood
+                                    boards,
+                                    and the emotional resonance you wish to convey.</p>
+                            </div>
+                            <img src="assets/img/services-process.png" alt="Consultation"
+                                class="process-img-mini d-none d-md-block">
+                        </div>
+                        <div class="process-step">
+                            <div class="process-num">02</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 text-uppercase ls-1">Drafting & Refinement</h4>
+                                <p class="small opacity-75 mb-0">Initial pencil sketches and script samples are shared
+                                    for
+                                    feedback, ensuring every flourish aligns with your style.</p>
+                            </div>
+                            <img src="assets/img/services-drafting.png" alt="Drafting"
+                                class="process-img-mini d-none d-md-block">
+                        </div>
+                        <div class="process-step">
+                            <div class="process-num">03</div>
+                            <div class="flex-grow-1">
+                                <h4 class="h5 text-uppercase ls-1">The Final Inking</h4>
+                                <p class="small opacity-75 mb-0">Using custom-mixed pigments, we meticulously bring the
+                                    final pieces to life on heritage papers.</p>
+                            </div>
+                            <img src="assets/img/services-inking.png" alt="Inking"
+                                class="process-img-mini d-none d-md-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MATERIAL STUDIO (New Section 2) -->
+        <section class="section-padding bg-white reveal">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <span class="text-gold text-uppercase small ls-3 mb-2 d-block">The Details</span>
+                        <h2 class="display-3">Curated Add-ons</h2>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-4">
+                        <div class="material-gallery-item">
+                            <div class="material-gallery-inner">
+                                <div class="material-gallery-front">
+                                    <img src="assets/img/detail-wax-seals.png" alt="Wax Seals">
+                                </div>
+                                <div class="material-gallery-back text-center">
+                                    <h5 class="text-uppercase ls-1 mb-2 text-white">Heritage Wax Seals</h5>
+                                    <p class="small mb-2">Custom brass crests and organic wax colors.</p>
+                                    <p class="small mb-0 text-gold">Available in 12 distinct shades.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="material-gallery-item">
+                            <div class="material-gallery-inner">
+                                <div class="material-gallery-front">
+                                    <img src="assets/img/detail-silk-ribbons.png" alt="Ribbons">
+                                </div>
+                                <div class="material-gallery-back text-center">
+                                    <h5 class="text-uppercase ls-1 mb-2 text-white">Silk Ribbons</h5>
+                                    <p class="small mb-2">Hand-dyed, frayed-edge silk in custom shades.</p>
+                                    <p class="small mb-0 text-gold">Sourced from artisan weavers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="material-gallery-item">
+                            <div class="material-gallery-inner">
+                                <div class="material-gallery-front">
+                                    <img src="assets/img/detail-deckle-paper.png" alt="Paper">
+                                </div>
+                                <div class="material-gallery-back text-center">
+                                    <h5 class="text-uppercase ls-1 mb-2 text-white">Deckle Paper</h5>
+                                    <p class="small mb-2">100% cotton handmade paper from heritage mills.</p>
+                                    <p class="small mb-0 text-gold">Acid-free archival quality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTMENT -->
+        <section class="section-padding text-center reveal bg-body">
+            <div class="container">
+                <div class="col-lg-8 mx-auto p-5 border">
+                    <span class="text-gold text-uppercase small ls-3 mb-3 d-block">Investment</span>
+                    <h2 class="display-4 mb-4">The Cost of Craft</h2>
+                    <p class="lead opacity-75 mb-5">Every project is a unique collaboration. As each piece is
+                        hand-lettered with individual attention, commissions typically begin at $250.</p>
+                    <a href="contact.html" class="btn-artisanal">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="site-logo mb-4 d-inline-block" href="index.html">
+                        <span class="logo-icon"><i class="bi bi-feather"></i></span>Alexandra
+                <span class="logo-gold">Sterling</span>
+                    </a>
+                    <p class="small opacity-75 mt-3">Bespoke calligraphy and custom signage for life's most beautiful
+                        moments.</p>
+                    <div class="d-flex gap-3 mt-4"><a href="#" class="footer-social"><i
+                                class="bi bi-instagram"></i></a><a href="#" class="footer-social"><i
+                                class="bi bi-pinterest"></i></a><a href="#" class="footer-social"><i
+                                class="bi bi-envelope"></i></a></div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <p class="footer-heading">Navigate</p>
+                    <a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">Our
+                        Story</a><a href="services.html" class="footer-link">Services</a><a href="portfolio.html"
+                        class="footer-link">Portfolio</a><a href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Offerings</p>
+                    <a href="services.html" class="footer-link">Wedding Suites</a><a href="services.html"
+                        class="footer-link">Event Signage</a><a href="services.html" class="footer-link">Bespoke
+                        Commissions</a><a href="services.html" class="footer-link">Brand Identity</a>
+                </div>
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Connect</p>
+                    <p class="small opacity-75">hello@alexandrasterling.art</p>
+                    <p class="small opacity-75">Ink District, City Center</p>
+                    <a href="contact.html" class="btn-artisanal mt-3" style="padding: 8px 22px; font-size: 0.7rem;">Send
+                        Inquiry</a>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="small opacity-50 mb-0">&copy; 2026 Alexandra Sterling Studio.</p>
+                <div class="d-flex gap-3"><a href="login.html" class="footer-link mb-0">Login</a><a href="register.html"
+                        class="footer-link mb-0">Sign Up</a></div>
+            </div>
+        </div>
+    </footer>
+    <div class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
