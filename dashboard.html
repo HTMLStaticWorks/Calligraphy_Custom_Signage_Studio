@@ -72,6 +72,20 @@
             .sidebar.active { left: 0; }
             .main-content { padding: 20px; }
         }
+
+        /* RTL Dashboard */
+        [dir="rtl"] .sidebar {
+            border-right: none;
+            border-left: 1px solid var(--border-soft);
+        }
+        [dir="rtl"] .menu-link i {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+        [dir="rtl"] #sidebarToggle {
+            margin-right: 0;
+            margin-left: 15px;
+        }
     </style>
 </head>
 <body>
@@ -80,10 +94,7 @@
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <a class="site-logo" href="index.html" style="font-size: 1.5rem;">
-                    <span class="logo-icon" style="width: 32px; height: 32px; font-size: 1.1rem;"><i class="bi bi-feather"></i></span>
-                    Alexandra <span class="logo-gold">Sterling</span>
-                </a>
+                <h5 class="opacity-50 text-uppercase ls-2 mb-0" style="font-size: 0.9rem;">Menu</h5>
             </div>
             <div class="sidebar-menu">
                 <a href="#overview" class="menu-link active" data-bs-toggle="tab"><i class="bi bi-grid-fill"></i> Studio Overview</a>
@@ -108,7 +119,9 @@
                     <h1 class="h3 mb-0">Studio <span class="text-gold" style="font-style: italic;">Manager</span></h1>
                 </div>
                 <div class="d-flex align-items-center gap-3">
-                    
+                    <button class="rtl-toggle-btn btn border-0 shadow-none" style="font-size: 0.7rem; letter-spacing: 2px;">
+                        <span style="font-weight:bold;">RTL</span>
+                    </button>
                     <div class="d-none d-md-block text-end">
                         <p class="small text-uppercase tracking-widest mb-0 opacity-50">Artist</p>
                         <h6 class="mb-0">Alexandra Sterling</h6>

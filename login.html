@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,7 +21,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
             margin: 0;
         }
 
@@ -69,15 +69,17 @@
 
 <body class="auth-viewport-lock">
 
-    <!-- THEME TOGGLE (Fixed Corner) -->
-    <div class="auth-nav">
-        <button id="theme-toggle" class="theme-toggle-btn" style="float: right;"><i
-                class="bi bi-moon-fill"></i></button>
-    </div>
-
     <!-- MAIN AUTH CONTENT -->
     <div class="auth-wrap">
         <div class="auth-card shadow-sm text-center reveal active">
+            <!-- THEME/RTL TOGGLES (Inside Box) -->
+            <div class="auth-nav d-flex justify-content-end gap-2 mb-2" style="margin-top: -20px; margin-right: -10px;">
+                <button class="rtl-toggle-btn" style="font-size: 0.7rem; letter-spacing: 2px;">
+                    <span style="font-weight:bold;">RTL</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+            </div>
+
             <a class="site-logo auth-card-logo" href="index.html">
                 <span class="logo-icon"><i class="bi bi-feather"></i></span>
                 Alexandra <span class="logo-gold">Sterling</span>

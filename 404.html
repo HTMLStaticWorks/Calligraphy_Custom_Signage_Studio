@@ -14,18 +14,73 @@
     <!-- HEADER -->
     <header>
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="site-logo" href="index.html"><span class="logo-icon"><i class="bi bi-feather"></i></span>Alexandra <span class="logo-gold">Sterling</span></a>
-            <div class="d-flex align-items-center gap-3">
-                
+            <!-- Logo: icon + name (same across all pages) -->
+            <a class="site-logo" href="index.html">
+                <span class="logo-icon"><i class="bi bi-feather"></i></span>
+                Alexandra <span class="logo-gold">Sterling</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="d-none d-xl-flex align-items-center gap-1">
+                <div class="header-dropdown">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="header-dropdown-menu">
+                        <a href="index.html">Home Style 1</a>
+                        <a href="index-2.html">Home Style 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">Story</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
                 <a href="register.html" class="btn-header-signup ms-2">Sign Up</a>
-                
-                <button id="theme-toggle" class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+
+                <button class="rtl-toggle-btn btn border-0 shadow-none ms-2" style="font-size: 0.8rem; letter-spacing: 2px;">
+                    <span style="font-weight:bold;">RTL</span>
+                </button>
+
+                <button id="theme-toggle" class="theme-toggle-btn ms-2"><i class="bi bi-moon-fill"></i></button>
+            </nav>
+
+            <!-- Mobile toggles -->
+            <div class="d-flex d-xl-none align-items-center gap-2">
+                <button class="rtl-toggle-btn btn border-0 shadow-none" style="font-size: 0.7rem; letter-spacing: 2px;">
+                    <span style="font-weight:bold;">RTL</span>
+                </button>
+                <button id="theme-toggle-mobile" class="theme-toggle-btn"><i class="bi bi-moon-fill"></i></button>
+                <button class="btn border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
             </div>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header p-4 border-bottom">
+            <h5 class="offcanvas-title small text-uppercase ls-2">Menu</h5>
+            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="list-unstyled mb-0">
+                <li class="border-bottom"><a href="index.html" class="d-block p-4 text-decoration-none text-main opacity-75">Home</a></li>
+                <li class="border-bottom"><a href="about.html" class="d-block p-4 text-decoration-none text-main opacity-75">Our Story</a></li>
+                <li class="border-bottom"><a href="services.html" class="d-block p-4 text-decoration-none text-main opacity-75">Services</a></li>
+                <li class="border-bottom"><a href="portfolio.html" class="d-block p-4 text-decoration-none text-main opacity-75">Portfolio</a></li>
+                <li class="border-bottom"><a href="blog.html" class="d-block p-4 text-decoration-none text-main opacity-75">Journal</a></li>
+                <li class="border-bottom"><a href="contact.html" class="d-block p-4 text-decoration-none text-main opacity-75">Contact</a></li>
+                <li class="p-4 bg-light">
+                    <a href="login.html" class="btn btn-artisanal w-100 mb-3">Login</a>
+                    <a href="register.html" class="btn btn-header-signup w-100">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- MAIN -->
-    <main class="flex-grow-1 d-flex align-items-center justify-content-center text-center py-5">
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center text-center py-5" style="margin-top: 80px;">
         <div class="reveal active">
             <div class="flourish">404</div>
             <h1 class="display-1 text-gold mb-0">Misplaced</h1>
@@ -34,14 +89,56 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer" style="padding: 30px 0;">
+    <!-- FOOTER (4-column) -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
-                <a class="site-logo" href="index.html" style="font-size: 1.6rem;">
-                        <span class="logo-icon"><i class="bi bi-feather"></i></span>Alexandra <span class="logo-gold">Sterling</span>
+            <div class="row g-5">
+                <!-- Col 1: Logo + about -->
+                <div class="col-lg-4 footer-logo-col">
+                    <a class="site-logo mb-4 d-inline-block" href="index.html">
+                        <span class="logo-icon"><i class="bi bi-feather"></i></span>
+                        Alexandra <span class="logo-gold">Sterling</span>
                     </a>
-                <p class="small opacity-50 mb-0">&copy; 2026 Alexandra Sterling Studio.</p>
+                    <p class="small opacity-75 mt-3">Bespoke calligraphy and custom signage for life's most beautiful
+                        moments.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="footer-social"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="footer-social"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Navigation -->
+                <div class="col-sm-4 col-lg-2">
+                    <p class="footer-heading">Navigate</p>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">Our Story</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <!-- Col 3: Services -->
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Offerings</p>
+                    <a href="services.html" class="footer-link">Wedding Suites</a>
+                    <a href="services.html" class="footer-link">Event Signage</a>
+                    <a href="services.html" class="footer-link">Bespoke Commissions</a>
+                    <a href="services.html" class="footer-link">Brand Identity</a>
+                </div>
+                <!-- Col 4: Contact -->
+                <div class="col-sm-4 col-lg-3">
+                    <p class="footer-heading">Connect</p>
+                    <p class="small opacity-75">hello@alexandrasterling.art</p>
+                    <p class="small opacity-75">Ink District, City Center</p>
+                    <a href="contact.html" class="btn-artisanal mt-3" style="padding: 8px 22px; font-size: 0.7rem;">Send Inquiry</a>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="small opacity-50 mb-0">&copy; 2026 Alexandra Sterling Studio. Handcrafted with love.</p>
+                <div class="d-flex gap-3">
+                    <a href="login.html" class="footer-link mb-0">Login</a>
+                    <a href="register.html" class="footer-link mb-0">Sign Up</a>
+                    <a href="404.html" class="footer-link mb-0">404</a>
+                </div>
             </div>
         </div>
     </footer>
